@@ -19,3 +19,5 @@ use Illuminate\Support\Facades\Route;
     Route::apiResource('project', \App\Http\Controllers\ProjectController::class);
     Route::apiResource('task', \App\Http\Controllers\TaskController::class);
 //});
+Route::post('/login', [\App\Http\Controllers\ApiAuthController::class, 'login']);
+Route::post('/logout', [\App\Http\Controllers\ApiAuthController::class, 'logout']);
